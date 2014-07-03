@@ -15,7 +15,7 @@ before_script:
 - git checkout gh-pages
 - git pull origin gh-pages
 - cd ..
-script: yes | cp ./cabal-sandbox/bin/elm* ./_bin
+script: yes | cp ./.cabal-sandbox/bin/elm* ./_bin
 after_script:
 - cd _bin
 - git status
