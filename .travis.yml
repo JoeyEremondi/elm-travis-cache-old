@@ -19,7 +19,7 @@ script: yes | cp ./.cabal-sandbox/bin/elm* ./_bin
 after_script:
 - cd _bin
 - git status
-- git add -all
+- git add --all
 - git config --global user.email "joey@eremondi.com"
 - git config --global user.name "JoeyEremondi"
 - git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
