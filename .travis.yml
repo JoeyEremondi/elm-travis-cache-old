@@ -19,7 +19,8 @@ before_script:
 - cd ..
 script: 
  - yes | cp ./.cabal-sandbox/bin/elm* ./_bin
- - tar -czf ./_bin/elm_home.tar.gz ./.cabal-sandbox/share/x86_64-linux-ghc-7.6.3/Elm-0.12.3
+ - cp -r ./.cabal-sandbox/share/x86_64-linux-ghc-7.6.3/Elm-0.12.3 ./elm-home
+ - tar -czf ./_bin/elm_home.tar.gz ./elm-home
 after_script:
 - cd _bin
 - git status
