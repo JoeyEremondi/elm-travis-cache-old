@@ -11,14 +11,15 @@ env:
 install:
 - cabal sandbox init
 - cabal install -j --max-backjumps=-1 Elm elm-server elm-get elm-repl
-- find . -name "interfaces.data"
+
 before_script:
 - cd _bin
 - git checkout gh-pages
 - git pull origin gh-pages
 - cd ..
-script: yes | cp ./.cabal-sandbox/bin/elm* ./_bin
-after_script:
+script: 
+ - yes | cp ./.cabal-sandbox/bin/elm* ./_bin
+ - tar -xzvf ./_bin/elm_home.tar.gz ./.cabal-sandbox/share/x86_64-linux-ghc-7.6.3/Elm-0.12.3
 - cd _bin
 - git status
 - git add --all
