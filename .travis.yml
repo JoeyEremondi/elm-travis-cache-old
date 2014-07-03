@@ -1,0 +1,27 @@
+language: haskell
+branches:
+  only:
+  - master
+ghc:
+- 7.6
+env:
+  global:
+   - secure: Qq8gROOsn8TB3kBpGkuubVz/njry9qQkaNUi62z6+rlQnIx6WoRag6eQFXQL8cjwfb3/MtpUiqVBMVbcJSaq1kOlpBa+UihBdBCb7IWneODWlwtFI7fwHaP4pojidaHn7is8r/FzY+Z8yZbKpqEy3GfCr+EsWFHdiiA3OfdAuJ0=
+install:
+- cabal sandbox init
+- cabal install -j --max-backjumps=-1
+before_script:
+- cd _bin
+- git checkout gh-pages
+- git pull origin gh-pages
+- cd ..
+script: yes | cp ./cabal-sandbox/bin/elm* ./_bin
+after_script:
+- cd _bin
+- git status
+- git add -all
+- git config --global user.email "joey@eremondi.com"
+- git config --global user.name "JoeyEremondi"
+- git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
+- git push "$ELM_BINARY_URL" gh-pages >/dev/null 2>&1
+- cd ..
