@@ -6,7 +6,7 @@ ghc:
 - 7.6
 env:
   global:
-   - secure: Qq8gROOsn8TB3kBpGkuubVz/njry9qQkaNUi62z6+rlQnIx6WoRag6eQFXQL8cjwfb3/MtpUiqVBMVbcJSaq1kOlpBa+UihBdBCb7IWneODWlwtFI7fwHaP4pojidaHn7is8r/FzY+Z8yZbKpqEy3GfCr+EsWFHdiiA3OfdAuJ0=
+  - secure: SzY6eZ8+pD9oGFXd1VIBVK/zFEtGotBFk4XsZcNT4zyuQSVqmllU4nnmWuyr98UCGnpUDq3uM8WZ34pEZbmxY7+fvpNy5r80vCSkO6uCDGlTmcdrJYQwj2jY2Z1Hs91VhSbzlSFwl5UmAYsiOUzvXk5iWACLAeCVyp3W98F17JQ=
 install:
 - cabal sandbox init
 - cabal install -j --max-backjumps=-1
