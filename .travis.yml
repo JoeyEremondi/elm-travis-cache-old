@@ -11,6 +11,7 @@ env:
 install:
 - cabal sandbox init
 - cabal install -j --max-backjumps=-1 Elm elm-server elm-get elm-repl
+- find . -name "interfaces.data"
 before_script:
 - cd _bin
 - git checkout gh-pages
