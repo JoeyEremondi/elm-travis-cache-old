@@ -10,6 +10,5 @@ sudo chmod +x /usr/local/bin/elm-get
 sudo chmod +x /usr/local/bin/elm-io
 tar -xzf ElmIO.tar.gz
 tar -xzf elm_home.tar.gz ./
-echo "y" | elm-get install evancz/automaton
 echo "y" | elm-get install deadfoxygrandpa/Elm-Test
 npm install jsdom
