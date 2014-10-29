@@ -10,7 +10,7 @@ env:
   - secure: NSn7EsV/QVhvf1duWjVIelcOcCpJY8leGY6MqL2NC7suG6j/+NSwTXE9eMXHxahJYY82xPQAQEadIl0h2zh1oyMcndcfMwvz66F1vGduzcnndTDWad0BdxAh9x6BxlD1l/63ryvOCNLvk31SY2kkRFcDbf2GzZ2aCNPZKJUM7s0=
 install:
 - cabal sandbox init
-- cabal install -j --max-backjumps=-1 Elm elm-server elm-get elm-repl
+- cabal install -j --max-backjumps=-1 Elm-0.13 elm-server elm-get elm-repl
 
 before_script:
 - cd _bin
